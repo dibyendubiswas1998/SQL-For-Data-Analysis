@@ -1,3 +1,6 @@
+## Data Set Link:
+https://drive.google.com/file/d/1s2D2BtxE1St3EvP8bEEPBAYV92UhwkMZ/view?usp=share_link
+
 ## Meta Data:
 
 This file provides a comprehensive overview of the tables found in the 'gdb023' (atliq_hardware_db) database. It includes information for six main tables:
