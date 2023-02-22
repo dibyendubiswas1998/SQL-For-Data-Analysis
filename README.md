@@ -9,7 +9,7 @@
 
 
 ### Insight:
-**Link**:
+**Link**: https://github.com/dibyendubiswas1998/SQL-For-Data-Analysis/blob/main/Project%201:%20Provide%20Insights%20in%20Consumer%20Goods%20Domain/Analysis%20Report/Presentation1.pdf
 
 <br>
 
