@@ -11,4 +11,5 @@
 **Link:** https://drive.google.com/file/d/1s2D2BtxE1St3EvP8bEEPBAYV92UhwkMZ/view?usp=share_link
 
 ### Insights:
-**Link:**
+**Link:** https://github.com/dibyendubiswas1998/SQL-For-Data-Analysis/blob/main/Project%201:%20Provide%20Insights%20in%20Consumer%20Goods%20Domain/Analysis%20Report/Presentation1.pdf
+
