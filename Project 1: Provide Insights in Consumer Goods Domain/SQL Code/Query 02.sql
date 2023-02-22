@@ -14,7 +14,7 @@ select count(*) from fact_sales_monthly; # 9,71,631 records
 1. Provide the list of markets in which customer "Atliq Exclusive" operates its
    business in the APAC region.
 **/
-select market from dim_customer where customer="Atliq Exclusive" and region="APAC";
+select distinct market from dim_customer where customer="Atliq Exclusive" and region="APAC";
 
 /**
 2. What is the percentage of unique product increase in 2021 vs. 2020? The
@@ -26,21 +26,21 @@ select market from dim_customer where customer="Atliq Exclusive" and region="APA
 **/
 with
 unique_products_2020 as 
-	(select distinct p.product, count(distinct p.product_code) as unique_products_2020 from dim_product as p
+	(select count(distinct p.product_code) as unique_products_2020 from dim_product as p
 	 join fact_sales_monthly as s
      on p.product_code = s.product_code
      where s.fiscal_year=2020 group by p.product
     ),
 unique_products_2021 as 
-	(select distinct p.product, count(distinct p.product_code) as unique_products_2021 from dim_product as p
+	(select count(distinct p.product_code) as unique_products_2021 from dim_product as p
 	 join fact_sales_monthly as s
      on p.product_code = s.product_code
      where s.fiscal_year=2021 group by p.product
     )
-select p0.product, p1.unique_products_2021, p0.unique_products_2020,
-round((((p1.unique_products_2021 - p0.unique_products_2020) / p0.unique_products_2020)*100), 2) as percentage_chg 
+select sum(p1.unique_products_2021) as unique_products_2021, sum(p0.unique_products_2020) as unique_products_2020,
+round((unique_products_2020/unique_products_2021)*100, 2) as percentage_chg
 from unique_products_2020 as p0
-inner join unique_products_2021 as p1;
+cross join unique_products_2021 as p1;
 
 
 /**
