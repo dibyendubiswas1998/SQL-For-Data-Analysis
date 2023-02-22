@@ -1,4 +1,4 @@
-channel,gross_sales_mln
-Direct,2611
-Distributor,1067
-Retailer,991
+channel,gross_sales_mln,percentage
+Direct,2611,55.92
+Distributor,1067,22.85
+Retailer,991,21.23
